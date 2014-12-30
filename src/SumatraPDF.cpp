@@ -2008,9 +2008,13 @@ void GetFixedPageUiColors(COLORREF& text, COLORREF& bg)
         text = gGlobalPrefs->fixedPageUI.textColor;
         bg = gGlobalPrefs->fixedPageUI.backgroundColor;
     }
-    if (gGlobalPrefs->fixedPageUI.invertColors) {
-        std::swap(text, bg);
-    }
+
+	// always swap color
+    std::swap(text, bg);
+
+    //if (gGlobalPrefs->fixedPageUI.invertColors) {
+    //    std::swap(text, bg);
+    //}
 }
 
 void GetEbookUiColors(COLORREF& text, COLORREF& bg)
